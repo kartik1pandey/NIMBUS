@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,button {
+    font-family: cursive;
+}
+
+.navbar {
+    width: 100%;
+    background: linear-gradient(to right, #004687, #2CB9F6);
+    display: flex;
+    padding: 5px 20px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 0px 10px #00000082;
+    position: fixed;
+    z-index: 10;
+}
+
+.navbar p {
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.uni {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    font-weight: 50;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    top: 60px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* align-items: center; */
+    padding: 10px 30px 10px 30px;
+    /* overflow: scroll; */
+}
+.container h1{
+    color: #004687;
+    margin-bottom: 20px;
+}
+.box{
+    /* background-color: #2CB9F6; */
+    border: 1px solid #004687;
+    width: 100%;
+    
+    padding: 20px;
+
+}
+.b1{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.b1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.profcard {
+    width: 30%;
+    background-color: #e7f3ff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.profimg{
+    padding: 0;
+    border: 3px solid #004687;
+    border-radius: 5px;
+    overflow: hidden;
+}
+.profcard img {
+    width: 100%;
+    height: 100%;
+    
+    margin-bottom: 10px;
+}
+
+.profcard h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.profcard p {
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+.contact-info {
+    margin-top: 10px;
+    color: #555;
+}
+
+.contact-info p {
+    font-size: 0.85rem;
+}
+
+.email a {
+    color: #0077b6;
+    text-decoration: none;
+}
+
+.email a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .uni {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .navbar p {
+        font-size: 20px;
+    }
+
+    .profile {
+        margin-left: auto;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar p {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .profile {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        margin-left: auto;
+        border-radius: 50%;
+    }
+    
+    .uni {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .navbar p {
+        font-size: 20px;
+    }
+}

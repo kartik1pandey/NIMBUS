@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="uni">
+            <div class="logo">
+                <img src="images\logo.png" alt="logo">
+            </div>
+            <div class="uniname">
+                <p>Sant Longowal Institute of Engineering and Technology, Punjab</p>
+            </div>
+        </div>
+        <div class="profile">
+            <i class="fa-regular fa-user"></i>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box">
+            <div id="portal">
+                <h1>Inspiring success, <br> one mentorship at a time.</h1>
+                <button id="student">Student's Portal</button>
+                <button id="prof">Professor's Portal</button>
+            </div>
+            <div id="box2">
+                <div class="back">
+                    <i id="backarrow" class="fa-solid fa-arrow-left"></i>
+                </div>
+                <h2>Welcome Back!</h2>
+                <div class="a1">
+                    <input id="email" type="text" placeholder="Enter your username" required>
+                </div>
+                <div class="a2">
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                </div>
+                <div class="a3">
+                    <label for="forgotpw">Forgot password?</label>
+                </div>
+                <button class="li" onclick="home()">LogIn</button>
+                <div class="a4" onclick="Signup()">
+                    Don't have an account? <B>Sign up now!</B> 
+                </div>
+            </div>
+            <div id="box3">
+                <div class="back">
+                    <i id="backarrow" class="fa-solid fa-arrow-left"></i>
+                </div>
+                <h2>Create Account!</h2>
+                <div class="b1">
+                    <input type="text" id="username" placeholder="Enter your username" required>
+                </div>
+                <div class="b2">
+                    <input type="text" id="emailid" placeholder="Enter your email" required>
+                </div>
+                <div class="b3">
+                    <input type="text" id="phonenum" placeholder="Phone Number" required>
+                </div>
+                <div class="b4">
+                    <select name="class" id="class" required>
+                        <option value="" disabled selected>Class</option>
+                        <option value="6">Class-6</option>
+                        <option value="7">Class-7</option>
+                        <option value="8">Class-8</option>
+                        <option value="9">Class-9</option>
+                        <option value="10">Class-10</option>
+                        <option value="11">Class-11</option>
+                        <option value="12">Class-12</option>
+                    </select>
+                    <input type="date" id="dob" name="dob" placeholder="DOB" required>
+                </div>
+                <button class="su" onclick="home()">SignUp</button>
+                <div class="b5" onclick="Login()">
+                    Already have an account? <b>Login Now!</b>
+                </div>
+            </div>
+            <!-- <div class="left">
+                
+            </div>
+        
+            <div class="right">
+                <img class="leftimg" src="images\bg.png" alt="teacher">
+            </div> -->
+        </div>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
