@@ -1,0 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, button {
+    font-family: cursive;
+}
+
+.navbar {
+    width: 100%;
+    background: linear-gradient(to right, #004687, #0583b9);
+    display: flex;
+    padding: 5px 20px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0px 0px 20px 20px;
+    box-shadow: 0px 0px 10px #00000082;
+    position: fixed;
+    z-index: 10;
+}
+
+.navbar p {
+    font-size: 22px;
+    line-height: 1.3;
+}
+
+.uni {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 21px;
+    width: 35px;
+    height: 35px;
+    border: 2px solid white;
+    border-radius: 50%;
+    position: relative;
+    font-weight: 50;
+}
+
+.container {
+    width: 100vw;
+    height: calc(100vh - 60px); /* Adjust for navbar height */
+    top: 60px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px 30px;
+    overflow-y: auto; /* Allow scrolling if content exceeds the viewport */
+}
+
+.container h1 {
+    color: #004687;
+    margin-bottom: 10px;
+}
+
+#meeting-requests-title,
+#scheduled-meetings-title {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.schedule {
+    margin-top: 20px;
+}
+
+.req {
+    width: 100%;
+    text-align: center;
+}
+
+#requests-list,
+#scheduled-list {
+    width: 100%;
+    border: 1px solid #004687;
+    border-radius: 5px;
+    padding: 20px 0px;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.meeting-request {
+    width: 30%;
+    padding: 20px;
+    background-color: #e5f3ff;
+    box-shadow: 1px 1px 10px 0px #0000002c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.meeting-request p {
+    margin: 5px 0;
+}
+
+.but {
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px;
+}
+
+.accept-btn, .cancel-btn {
+    background-color: #004687;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 1px;
+    width: 48%;
+}
+
+.accept-btn:hover {
+    background-color: #00415a;
+}
+
+.cancel-btn {
+    background: transparent;
+    border: 1px solid #004687;
+    color: #004687;
+}
+
+.cancel-btn:hover {
+    color: #004687;
+    border: 1px solid #004687;
+    background-color: #e5f3ff;
+}
+
+.scheduled-meeting {
+    width: 30%;
+    padding: 20px;
+    background-color: #e5f3ff;
+    box-shadow: 1px 1px 10px 0px #0000002c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.cancelmeet {
+    background-color: #ffffff;
+    border: 1px solid #004687;
+    color: #004687;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px 0;
+    width: 48%;
+}
+
+.meetlist {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items */
+    }
+
+    .navbar p {
+        font-size: 20px; /* Adjusted font size for navbar */
+    }
+
+    .meeting-request, .scheduled-meeting {
+        width: 100%; /* Full width for smaller screens */
+        margin-bottom: 15px; /* Spacing between requests */
+    }
+
+    .container {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    .accept-btn, .cancel-btn, .cancelmeet {
+        width: 100%; /* Full width buttons */
+    }
+
+    #requests-list, #scheduled-list {
+        flex-direction: column; /* Stack items vertically */
+        align-items: stretch; /* Stretch items to full width */
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar p {
+        font-size: 18px; /* Smaller text */
+    }
+
+    .logo {
+        width: 40px; /* Smaller logo */
+        height: 40px;
+    }
+
+    .profile {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+    }
+
+    .meeting-request, .scheduled-meeting {
+        padding: 10px; /* Less padding for smaller screens */
+    }
+
+    .container {
+        padding: 5px; /* Even less padding */
+    }
+}
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .uni {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    .navbar p {
+        font-size: 20px;
+    }
+
+    .profile {
+        margin-left: auto;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar p {
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+    }
+
+    .profile {
+        width: 30px;
+        height: 30px;
+        font-size: 20px;
+        margin-left: auto;
+        border-radius: 50%;
+    }
+
+    .uni {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+
+    /* Center the box in mobile view */
+    .container {
+        padding-left: 0; /* Remove padding */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+    }
+
+    .box {
+        width: 90%; /* Ensure the box takes most of the width */
+        max-width: 400px; /* Optional: Set a max width to avoid stretching */
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .navbar p {
+        font-size: 20px;
+    }
+}
+

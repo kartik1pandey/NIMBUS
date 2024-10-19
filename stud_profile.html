@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="student.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="uni">
+            <div class="logo">
+                <img src="images/logo.png" alt="logo">
+            </div>
+            <div class="uniname">
+                <p>Sant Longowal Institute of Engineering and Technology, Punjab</p>
+            </div>
+        </div>
+        <div class="profile">
+            <i class="fa-regular fa-user"></i>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Profile</h1>
+        <div class="profile-card">
+            <div class="profile-photo">
+                <img src="images/student_photo.jpg" alt="Student Photo" id="student-photo">
+            </div>
+            <div class="profile-details">
+                <h2 id="student-name">Rashi</h2>
+                <p id="student-email">Email: rashi@example.com</p>
+                <p id="student-department">Department: Computer Science and Engineering</p>
+                <p id="student-phone">Phone: +91-1234-567890</p>
+                <button id="edit-profile-btn">Edit Profile</button>
+            </div>
+        </div>
+
+        <div class="meeting-info">
+            <h2>Meeting Information</h2>
+            <p><strong>Number of Meetings Attended:</strong> <span id="meetings-attended">5</span></p>
+            <p><strong>Scheduled Meetings:</strong></p>
+            <ul id="scheduled-meetings">
+                <li>Meeting with Dr. Birmohan Singh on 2024-10-20 at 10:00 AM</li>
+                <li>Meeting with Dr. Damanpreet Singh on 2024-10-25 at 12:00 PM</li>
+            </ul>
+            <button id="view-history-btn">View Meeting History</button>
+        </div>
+
+        <div id="meeting-history-popup" class="popup">
+            <div class="popup-content">
+                <h3>Meeting History</h3>
+                <ul id="meeting-history">
+                    <li>Meeting with Dr. Manoj Sachan on 2024-09-15 at 11:00 AM</li>
+                    <li>Meeting with Dr. Gurjinder Kaur on 2024-09-20 at 02:00 PM</li>
+                </ul>
+                <button id="close-history-btn">Close</button>
+                <div class="close-popup">x</div>
+            </div>
+        </div>
+
+        <div id="edit-profile-popup" class="popup">
+            <div class="popup-content">
+                <h3>Edit Profile</h3>
+                <label for="name">Name:</label>
+                <input type="text" id="edit-name" value="Rashi">
+                <label for="email">Email:</label>
+                <input type="email" id="edit-email" value="rashi@example.com">
+                <label for="department">Department:</label>
+                <input type="text" id="edit-department" value="Computer Science and Engineering">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="edit-phone" value="+91-1234-567890">
+                <button id="save-profile-btn">Save Changes</button>
+                <div class="close-popup">x</div>
+            </div>
+        </div>
+    </div>
+
+    <script>// Get elements
+        const viewHistoryBtn = document.getElementById('view-history-btn');
+        const meetingHistoryPopup = document.getElementById('meeting-history-popup');
+        const closeHistoryBtn = document.getElementById('close-history-btn');
+        
+        // Show meeting history on button click
+        viewHistoryBtn.addEventListener('click', () => {
+            meetingHistoryPopup.style.display = 'flex';
+        });
+        
+        // Close the meeting history popup
+        closeHistoryBtn.addEventListener('click', () => {
+            meetingHistoryPopup.style.display = 'none';
+        });
+        
+        // Close the popup when clicking outside
+        document.querySelector('.close-popup').onclick = function () {
+            meetingHistoryPopup.style.display = 'none';
+        }
+        
+        // Close history popup when clicking outside the popup content
+        window.onclick = function (event) {
+            if (event.target === meetingHistoryPopup) {
+                meetingHistoryPopup.style.display = 'none';
+            }
+        }
+        </script>
+</body>
+
+</html>
