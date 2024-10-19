@@ -62,7 +62,7 @@ body,button {
     height: 100vh;
     background-image: url('images/bg.png');
     background-size: cover; /* Ensures image covers the container */
-    background-position: center;
+    background-position: left;
     background-repeat: no-repeat; /* Prevents the image from repeating */
     position: absolute;
     display: flex;
@@ -165,16 +165,9 @@ body,button {
     display: flex;
     flex-direction: column;
     margin: 7px;
+   
 }
-.b4{
-    display: flex;
-    flex-direction: row;
-    margin: 7px;
-    /* background-color: #004687; */
-    width: 283px;
-    justify-content: space-between;
 
-}
 .a3{
     position: relative;
     top: -8px;
@@ -195,7 +188,7 @@ body,button {
     /* cursor: pointer; */
     padding: 11px 15px ;
     margin: 3px;
-    width: 250px;
+    width: 280px;
     border-radius: 3px;
     border: 1px solid #004687;
 }
@@ -272,7 +265,6 @@ h2{
     font-weight: 300;
 }
 
-
 @media screen and (max-width: 768px) {
     .navbar {
         flex-direction: row;
@@ -313,10 +305,22 @@ h2{
         margin-left: auto;
         border-radius: 50%;
     }
-    
+
     .uni {
         flex-direction: row;
         justify-content: flex-start;
+    }
+
+    /* Center the box in mobile view */
+    .container {
+        padding-left: 0; /* Remove padding */
+        justify-content: center; /* Center vertically */
+        align-items: center; /* Center horizontally */
+    }
+
+    .box {
+        width: 90%; /* Ensure the box takes most of the width */
+        max-width: 400px; /* Optional: Set a max width to avoid stretching */
     }
 }
 
